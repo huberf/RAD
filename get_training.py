@@ -11,5 +11,7 @@ def download_image(state):
         timestamp = time.time()
         image.retrieve(i, '{state}{timestamp}.jpg'.format(state=state, timestamp=timestamp))
 
-state = 'normal_street'
-download_image(state)
+if __name__ == '__main__':
+    state = raw_input('State> ')
+    download_image(state)
+    print('Done.')

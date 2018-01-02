@@ -1,4 +1,4 @@
-# RAD (Rapid Autonomous Defence) - A PAL security initiative
+# RAD (Rapid Autonomous Defense) - A PAL security initiative
 Stateful, automatic and minimal security system for one's dorm or interstellar military installation.
 
 ## Overview
