@@ -17,7 +17,7 @@ def load_data():
     keys = {}
     classes = []
     last_index = -1
-    imageDir = '../'
+    imageDir = '../training_set/'
     imageFiles = listdir(imageDir)
     for i in imageFiles:
         if i.endswith('.jpg'):
