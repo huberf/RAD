@@ -1,4 +1,5 @@
 import requests as r
+import recorder
 import alert
 import classifier
 from utils import load_config
@@ -22,6 +23,8 @@ def assessStatus(frame):
     global lastStatus
     status = classifier.getStatus(frame, lastStatus)
     lastStatus = status
+    # Finally save event for the records
+    recorder.log(status)
     return status
 
 def counterMeasure():

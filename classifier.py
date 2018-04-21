@@ -1,4 +1,5 @@
 import tensorflow as tf
+import time
 debug = False
 
 def getStatus(frame, lastStatus):
@@ -27,4 +28,5 @@ def getStatus(frame, lastStatus):
             abs(lastStatus['channels']['green'] - averageG) > threshold or
             abs(lastStatus['channels']['blue'] - averageB) > threshold):
             currentState = 'motion'
-    return { 'state': currentState, 'channels' : { 'red': averageR, 'green': averageG, 'blue': averageB } }
+    currentTime = time.time()
+    return { 'state': currentState, 'channels' : { 'red': averageR, 'green': averageG, 'blue': averageB }, 'timestamp': currentTime }
