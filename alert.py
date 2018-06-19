@@ -7,3 +7,4 @@ config = load_config.get_config()
 def alert_user(message, level):
     url = config['alert_url']
     r.get(url)
+    print('\a') # Makes audible alert sound on device
